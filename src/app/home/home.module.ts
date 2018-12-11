@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { QuestionComponent } from './question/question.component';
+import { BtcService } from '../services/btc/btc.service';
 
 @NgModule({
   imports: [
@@ -18,6 +20,7 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, QuestionComponent],
+  providers: [BtcService]
 })
 export class HomePageModule {}

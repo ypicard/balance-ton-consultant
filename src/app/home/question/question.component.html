@@ -1,0 +1,12 @@
+<ion-card>
+  <img src="/assets/background.jpeg" />
+  <ion-card-content>
+    <h1>{{ question.consultant }}</h1>
+    <div *ngFor="let p of possibilities">
+      <ion-button clear size="small" fill="clear" (click)="answerQuestion(p)">
+        <!-- <ion-icon name="text"></ion-icon> -->
+        {{ p.human }}
+      </ion-button>
+    </div>
+  </ion-card-content>
+</ion-card>

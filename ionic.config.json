@@ -1,6 +1,8 @@
 {
   "name": "balanceTonConsultant",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "pro_id": "ec1589b0"
 }
