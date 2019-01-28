@@ -2,11 +2,22 @@
   <img [src]="bgImage" />
   <ion-card-content>
     <h1>{{ question.consultant }}</h1>
-    <div *ngFor="let p of possibilities">
-      <ion-button clear size="small" fill="clear" (click)="answerQuestion(p)">
-        <!-- <ion-icon name="text"></ion-icon> -->
-        {{ p.human }}
-      </ion-button>
-    </div>
+
+    <ion-grid>
+      <ion-row
+        *ngFor="let p of possibilities; let idx = index"
+        (click)="answerQuestion(p)"
+      >
+        <ion-col size="2">
+          <img src="/assets/question-logos/q-{{ idx }}.png" />
+        </ion-col>
+        <ion-col size="10">
+          <ion-button clear size="small" fill="clear" class="q-btn">
+            <!-- <ion-icon name="text"></ion-icon> -->
+            {{ p.human }}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-card-content>
 </ion-card>

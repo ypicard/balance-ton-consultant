@@ -3,7 +3,7 @@
     <ion-button text-center *ngIf="btc.isReady() && !question" (click)="refreshQuestion()"
       >Kickstartons</ion-button
     >
-    <div *ngIf="question">
+    <div *ngIf="question" style="width: 100%">
       <app-question
         [question]="question"
         [possibilities]="possibilities"

@@ -46,8 +46,8 @@ export class QuestionComponent implements OnInit {
 
   public getRandomBackgorundImage() {
     // set number of background image choices here (must be equal to number of pictures in /assets/question-backgrounds)
-    const nb = this.getRandomInt(1, 2);
-    return '/assets/question-backgrounds/q-' + nb + '.jpeg';
+    const nb = this.getRandomInt(1, 25);
+    return '/assets/question-backgrounds/q-' + nb + '.jpg';
   }
 
   private getRandomInt(min, max) {
