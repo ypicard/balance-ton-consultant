@@ -9,7 +9,7 @@ export class BtcService {
   private ready: Boolean = false;
 
   constructor(private _http: HttpClient) {
-    console.log('init btc');
+    console.log('yap: init btc');
     this.fetchDataset().subscribe(
       res => {
         this.questions = res;
@@ -26,7 +26,6 @@ export class BtcService {
   }
 
   public getRandomQuestion(): Question {
-    console.log('random')
     return this.questions[Math.floor(Math.random() * this.questions.length)];
   }
 
