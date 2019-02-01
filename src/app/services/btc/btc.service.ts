@@ -9,7 +9,6 @@ export class BtcService {
   private ready: Boolean = false;
 
   constructor(private _http: HttpClient) {
-    console.log('yap: init btc');
     this.fetchDataset().subscribe(
       res => {
         this.questions = res;
